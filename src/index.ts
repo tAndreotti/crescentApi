@@ -28,7 +28,7 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 
 const mongoUrl = process.env.MONGO_URL;
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 
 const server = http.createServer(app);
 
