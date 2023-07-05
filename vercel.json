@@ -11,6 +11,5 @@
         "src": "/(.*)",
         "dest": "./src/index.ts"
       }
-    ],
-    "start": "ts-node ./src/index.ts"
+    ]
 }
