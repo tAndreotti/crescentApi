@@ -15,7 +15,7 @@ const app = express();
 dotenv.config();
 
 app.use(cors({
-    origin: "http://localhost:3000",
+    origin: "http://waning.cloud",
     credentials: true,
 }));
 
@@ -33,7 +33,7 @@ const port = process.env.PORT || 3000;
 const server = http.createServer(app);
 
 server.listen(port, () => {
-    console.log("Server running on http://localhost:3030/");
+    console.log("Server running on http://localhost:3000/");
 });
 
 mongoose.Promise = Promise;
