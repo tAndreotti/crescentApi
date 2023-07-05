@@ -15,7 +15,7 @@ const app = express();
 dotenv.config();
 
 app.use(cors({
-    origin: "http://waning.cloud",
+    origin: "https://waning.cloud",
     credentials: true,
 }));
 
