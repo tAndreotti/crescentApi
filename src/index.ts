@@ -40,5 +40,8 @@ mongoose.Promise = Promise;
 mongoose.connect(mongoUrl);
 mongoose.connection.on("error", (error: Error) => console.log(error));
 
+// Handle CORS preflight requests
+app.options("*", cors());
+
 // routes
 app.use("/", router());
