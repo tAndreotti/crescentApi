@@ -15,14 +15,7 @@ const app = express();
 dotenv.config();
 
 // Configurar o CORS
-const corsOptions = {
-    origin: "https://waning.cloud",
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    preflightContinue: false,
-    optionsSuccessStatus: 204,
-  };
-  
-app.use(cors(corsOptions));
+app.use(cors());
 
 // app.use(cors({
 //     origin: "https://waning.cloud",
