@@ -14,10 +14,20 @@ import router from "./router/index";
 const app = express();
 dotenv.config();
 
-app.use(cors({
+// Configurar o CORS
+const corsOptions = {
     origin: "https://waning.cloud",
-    credentials: true,
-}));
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    preflightContinue: false,
+    optionsSuccessStatus: 204,
+  };
+  
+app.use(cors(corsOptions));
+
+// app.use(cors({
+//     origin: "https://waning.cloud",
+//     credentials: true,
+// }));
 
 app.use(express.json());
 app.use(helmet());
