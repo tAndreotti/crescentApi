@@ -15,12 +15,12 @@ const app = express();
 dotenv.config();
 
 // Configurar o CORS
-app.use(cors());
+// app.use(cors());
 
-// app.use(cors({
-//     origin: "https://waning.cloud",
-//     credentials: true,
-// }));
+app.use(cors({
+    origin: "https://waning.cloud",
+    credentials: true,
+}));
 
 app.use(express.json());
 app.use(helmet());
