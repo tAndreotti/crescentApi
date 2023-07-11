@@ -30,7 +30,7 @@ export const register = async (req: express.Request, res: express.Response) => {
         friends,
       });
   
-      res.cookie("AUTH", user.authentication.sessionToken, { domain: "crescent-api.vercel.app", path: "/auth/register" });
+      res.cookie("AUTH", user.authentication.sessionToken, { domain: "waning.cloud", path: "/" });
   
       return res.status(200).json(user);
     } catch (error) {
@@ -64,7 +64,7 @@ export const login = async (req:express.Request, res: express.Response) => {
 
         await user.save();
 
-        res.cookie("AUTH", user.authentication.sessionToken, { domain: "crescent-api.vercel.app", path: "/auth/login" });
+        res.cookie("AUTH", user.authentication.sessionToken, { domain: "waning.cloud", path: "/" });
 
         return res.status(200).json(user);
 
