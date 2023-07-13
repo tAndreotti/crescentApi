@@ -18,7 +18,7 @@ dotenv.config();
 // app.use(cors());
 
 app.use(cors({
-    origin: "https://waning.cloud",
+    origin: ["https://waning.cloud", "https://www.waning.cloud"],
     credentials: true,
 }));
 
